@@ -20,10 +20,13 @@ The "main_loop()" then enters into a loop to display the menu choices from the "
 
 
 ### def menu_choice():
+This function dispalys the main menu and takes the user's input.
 
 ### def recipe_rec(df):
+This function provides a recipe recomendation for the users. The recommendation will be a recipe for which the users has not entred a preference. The recommended recipe title and url will be printed. This function takes the merged data and preferences pandas dataframe and returns None.
 
 ### def get_classifier(df):
+The function is used by the "evaluate_recipe()" function to return a pipeline object. The merged pandas datafram is passes as an input to the fuction. This fuction then creates a pipeline to transform data into a tfidf matrix then classify it according the a multinomial Naive Bayes classifier.
 
 ### def evaluate_recipe(df):
 
