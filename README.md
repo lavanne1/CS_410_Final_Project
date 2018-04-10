@@ -7,4 +7,4 @@ The documentation should consist of the following elements:
 4) Brief description of contribution of each team member in case of a multi-person team.  
 
 
-##Overview of Functions:
+## Overview of Functions:
