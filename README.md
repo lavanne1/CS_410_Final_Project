@@ -46,10 +46,15 @@ This function reads the raw data .txt files containing the scraped recipe data. 
 ## Implementation
 
 ### Updating Preferences
+Updating preferences is a relatively simple process. The user simply enters a url of the associated recipe and a rating (good or bad) for the recipe. The program then updates the pandas dataframe containing the prefences data. Addtionally the code overwrites the preferences.txt file, so the preferences can be saved for the next time the program runs.
 
 ### Evaluating a Recipe
+Evaluating a recipe relies heavily on the functionality provides by scikitlearn text analysis features. The code essentially creates a classifier and trains the classifier according to the user's preferences. This classifier is then used to predict whether a recipe with no known preference will be good or bad. 
+
+There are two primary components to creating the classifier - 1) the tfidf matrix and 2) the classifer itself. All data was transformed to a tfidf matrix based on unigrams and with english stopwords removed. This data was then used to train the multinomial Naive Bays classifier. These two components were then merged together utilizing a pipeline for ease of use. 
 
 ### Providing Recipe Reccomendation
+Providing a recipe recommendation primarily utilizes a simmilarity function. All recipes were conveted to a tfidf matrix representation (unigram model with english stopwords removed). All recipes evalued a "good" by the user were compared to all recipes with no known preference. A consie similarity function was used to find which recipe without a preference was most similar recipes evalued as "good". The recipes with the highest avearege similarity to all "good" recipes is chosen as the recommendation.
 
 
 ## Usage
