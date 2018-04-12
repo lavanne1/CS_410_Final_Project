@@ -26,14 +26,30 @@ This function dispalys the main menu and takes the user's input.
 This function provides a recipe recomendation for the users. The recommendation will be a recipe for which the users has not entred a preference. The recommended recipe title and url will be printed. This function takes the merged data and preferences pandas dataframe and returns None.
 
 ### def get_classifier(df):
-The function is used by the "evaluate_recipe()" function to return a pipeline object. The merged pandas datafram is passes as an input to the fuction. This fuction then creates a pipeline to transform data into a tfidf matrix then classify it according the a multinomial Naive Bayes classifier.
+The function is used by the "evaluate_recipe()" function to return a pipeline object. The merged pandas datafram is passes as an input to the fuction. This fuction then creates a pipeline to transform data into a tfidf matrix then classify it according the a multinomial Naive Bayes classifier. This function primarily relies on functionality from the scikitlearn python library.
 
 ### def evaluate_recipe(df):
+This function evaluates a recipe by predicted that it will be either "good" or "bad" according the the user's preferences. This function takes asks the user to input a url of a recipe (url's must be already scraped and loaded into the database). This function then calls the "get_classifier()" function to get a multinomial Naive Bayes classifier trained on the tfidf transformed preferenes the user had previous defined. Using this classifier, this function will predicted whether the input url would be a good of bad recipe.
 
-### ef update_preferences(df):
+### def update_preferences(df):
+This function allows the user to update prefrenes about recipes in the database. The user will entere a url and a rating (good or bad). This function then updates the preference values in the database and writes all new preferences to the preferences.txt file.
 
 ### def merge_data_and_pref(df, pref):
+The function merged the pandas dataframes created in "get_preferences()" and in "read_data()" into one pandas dataframe.
 
 ### def get_preferences(df):
+This function extracts the user preferences from the preferences.txt file. If this file does not exist, this function will create a new preferences.txt file initialized with "NULL" values for all preferences. Data extratacted from preferences.txt is then converted to a pandas dataframe and returnted by this function.
 
 ### def read_data():
+This function reads the raw data .txt files containing the scraped recipe data. The .txt data files were created using a web crawler and scraper to extract recipe data. This data was then converted to .txt files. This function extracts all this data and converted it to a pandas dataframe, which this function returns.
+
+## Implementation
+
+### Updating Preferences
+
+### Evaluating a Recipe
+
+### Providing Recipe Reccomendation
+
+
+## Usage
