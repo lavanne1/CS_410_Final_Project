@@ -6,6 +6,15 @@ The documentation should consist of the following elements:
 3) Documentation of the usage of the software including either documentation of usages of APIs or detailed instructions on how to install and run a software, whichever is applicable.  
 4) Brief description of contribution of each team member in case of a multi-person team.  
 
+## Purpose/ Function
+This program is intended to help usese make better decisions about making recipes. It essentially provides two main uses.
+  1) Evaluating a given recipe accorind the to uer's tastes
+  2) Recommending a new recipe for the user based on user's preferences
+
+This program will evaluate a recipe for a user based on the specific user's preferences. According to these proferences, this program can evaluate if a user will the the recipe is "good" or "bad" before even making the recipe. The intention of this functionality is to evaluate a specific recipes in which the user is interested. For example, the user may find a recipe online, but they aren't sure if they will like it. The use could simply enter the url into the program, and the program will be able to tell if the recipe is "good" or "bad" for that given user.
+
+The recommendation functionality is slightly different. This functionality looks at the database or recipes within the program and finds the recipe that the user will most likely enjoy. For example, if a user can't decide what to make for dinner, the user can simply ask this program for a recommendation. The program will then output a title and associated url of the recipe that the use will enjoy.
+
 
 ## Overview of Functions:
 
