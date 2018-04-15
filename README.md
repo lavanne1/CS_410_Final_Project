@@ -58,3 +58,32 @@ Providing a recipe recommendation primarily utilizes a simmilarity function. All
 
 
 ## Usage
+
+Using this program is very simple. Simply download all files and store in the same directory. Please note the README.md and clearn_url_list.txt are not stictly needed to run the program. 
+
+cleanr_url_list.txt provides a list of all url's included in the database. These are the only url's that the program can use for any functionality. YOu can use this file for testing and running the program when it is required for the user to input a url.
+
+After downloading the program, this application should should be run as a command prompt interfact. Simply run this program from your command promt window using the following command:
+  
+   python final_project_main.py
+   
+The program should run and the user can simply follow the on-screen prompts. The user can navigate the program through the menu options displayed. Note that the user should enter "q" on the main menu to quite the program.
+
+The main menu presents the user with the following opitons:
+
+    1) Update preferences
+    2) Evaluate a recipe
+    3) Get a recipe reccomendation
+    q) Quit
+    
+The user simply enters the correspoing menu choice (1, 2, 3, or q) to navigate to the proper functions in this application.
+
+### Team contributions
+
+John LaVanne dcontributions:
+  - Invented project idea
+  - Wrote project proposal
+  - Scraped all web recipe data
+  - Transformed data into .txt files
+  - Write all program code
+  - Wrote program documentation
