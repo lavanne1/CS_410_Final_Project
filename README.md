@@ -6,6 +6,7 @@ The documentation should consist of the following elements:
 3) Documentation of the usage of the software including either documentation of usages of APIs or detailed instructions on how to install and run a software, whichever is applicable.  
 4) Brief description of contribution of each team member in case of a multi-person team.  
 
+
 ## Purpose/ Function
 This program is intended to help usese make better decisions about making recipes. It essentially provides two main uses.
   1) Evaluating a given recipe accorind the to uer's tastes
@@ -15,8 +16,25 @@ This program will evaluate a recipe for a user based on the specific user's pref
 
 The recommendation functionality is slightly different. This functionality looks at the database or recipes within the program and finds the recipe that the user will most likely enjoy. For example, if a user can't decide what to make for dinner, the user can simply ask this program for a recommendation. The program will then output a title and associated url of the recipe that the use will enjoy.
 
+Additionally, this program provides the ability for a user to udate preferences for different recipes within the database. Updating these preferences helps make the recipe evaluation and recommenation more accurate.
 
-## Overview of Functions:
+
+## Implementation
+
+### Updating Preferences
+Updating preferences is a relatively simple process. The user simply enters a url of the associated recipe and a rating (good or bad) for the recipe. The program then updates the pandas dataframe containing the prefences data. Addtionally the code overwrites the preferences.txt file, so the preferences can be saved for the next time the program runs.
+
+### Evaluating a Recipe
+Evaluating a recipe relies heavily on the functionality provides by scikitlearn text analysis features. The code essentially creates a classifier and trains the classifier according to the user's preferences. This classifier is then used to predict whether a recipe with no known preference will be good or bad. 
+
+There are two primary components to creating the classifier - 1) the tfidf matrix and 2) the classifer itself. All data was transformed to a tfidf matrix based on unigrams and with english stopwords removed. This data was then used to train the multinomial Naive Bays classifier. These two components were then merged together utilizing a pipeline for ease of use. 
+
+### Providing Recipe Reccomendation
+Providing a recipe recommendation primarily utilizes a simmilarity function. All recipes were conveted to a tfidf matrix representation (unigram model with english stopwords removed). All recipes evalued a "good" by the user were compared to all recipes with no known preference. A consie similarity function was used to find which recipe without a preference was most similar recipes evalued as "good". The recipes with the highest avearege similarity to all "good" recipes is chosen as the recommendation.
+
+
+## Software Documentation/ Overview of Functions:
+Below is specific detail about how the program is implemented broken down by each funcition.
 
 ### def main_loop():
 This function controls the flow of the program. It serves as the "main function". Initially it calls the "read_data()" function to read the raw recipe data scraped from the web. Then "main_loop()" calls "get_preferences()" to extracts the users preferences about the recipes in the database. Then "merge_data_pref()" is called to merge the raw recipe data scraped from the web with the user preferences into on pandas dataframe.
@@ -52,21 +70,8 @@ This function extracts the user preferences from the preferences.txt file. If th
 ### def read_data():
 This function reads the raw data .txt files containing the scraped recipe data. The .txt data files were created using a web crawler and scraper to extract recipe data. This data was then converted to .txt files. This function extracts all this data and converted it to a pandas dataframe, which this function returns.
 
-## Implementation
 
-### Updating Preferences
-Updating preferences is a relatively simple process. The user simply enters a url of the associated recipe and a rating (good or bad) for the recipe. The program then updates the pandas dataframe containing the prefences data. Addtionally the code overwrites the preferences.txt file, so the preferences can be saved for the next time the program runs.
-
-### Evaluating a Recipe
-Evaluating a recipe relies heavily on the functionality provides by scikitlearn text analysis features. The code essentially creates a classifier and trains the classifier according to the user's preferences. This classifier is then used to predict whether a recipe with no known preference will be good or bad. 
-
-There are two primary components to creating the classifier - 1) the tfidf matrix and 2) the classifer itself. All data was transformed to a tfidf matrix based on unigrams and with english stopwords removed. This data was then used to train the multinomial Naive Bays classifier. These two components were then merged together utilizing a pipeline for ease of use. 
-
-### Providing Recipe Reccomendation
-Providing a recipe recommendation primarily utilizes a simmilarity function. All recipes were conveted to a tfidf matrix representation (unigram model with english stopwords removed). All recipes evalued a "good" by the user were compared to all recipes with no known preference. A consie similarity function was used to find which recipe without a preference was most similar recipes evalued as "good". The recipes with the highest avearege similarity to all "good" recipes is chosen as the recommendation.
-
-
-## Usage
+## Usage/ Installation
 
 Using this program is very simple. Simply download all files and store in the same directory. Please note the README.md and clearn_url_list.txt are not stictly needed to run the program. 
 
@@ -87,7 +92,7 @@ The main menu presents the user with the following opitons:
     
 The user simply enters the correspoing menu choice (1, 2, 3, or q) to navigate to the proper functions in this application.
 
-### Team contributions
+## Team contributions
 
 John LaVanne dcontributions:
   - Invented project idea
