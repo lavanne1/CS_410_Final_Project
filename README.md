@@ -1,8 +1,9 @@
 # CS_410_Final_Project
 
-Not that this program only supports python 3 (no python 2 support).
+Note that this program only supports python 3 (no python 2 support).
 
 Also, this requires the installation of the following packages before running:
+
   pandas
   scikitleanr
   numpy
