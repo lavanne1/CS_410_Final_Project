@@ -17,24 +17,24 @@ import numpy as np
 def read_data():
     #read data from .txt files
     read_ingredients = []
-    file = open("ingredients_output_data.txt", "r") 
+    file = open("ingredients_output_data.txt", "r",errors='ignore') 
     for index, line in enumerate(file): 
             read_ingredients.append(line.strip("\n"))
     
     read_instructions = []
-    file = open("instruction_output_data.txt", "r") 
+    file = open("instruction_output_data.txt", "r",errors='ignore') 
     for index, line in enumerate(file): 
             read_instructions.append(line.strip("\n"))
     
             
     read_total_times = []
-    file = open("total_time_output_data.txt", "r") 
+    file = open("total_time_output_data.txt", "r",errors='ignore') 
     for index, line in enumerate(file): 
             read_total_times.append(line.strip("\n"))
     
             
     read_titles = []
-    file = open("title_output_data.txt", "r") 
+    file = open("title_output_data.txt", "r",errors='ignore') 
     for index, line in enumerate(file): 
             read_titles.append(line.strip("\n"))
     
