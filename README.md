@@ -5,7 +5,7 @@ Note that this program only supports python 3 (no python 2 support).
 Also, this requires the installation of the following packages before running:
 
   - pandas  
-  - scikitlearn  
+  - sklearn  
   - numpy  
   - os
 
@@ -15,9 +15,9 @@ This program is intended to help usese make better decisions about making recipe
   1) Evaluating a given recipe accorind the to uer's tastes
   2) Recommending a new recipe for the user based on user's preferences
 
-This program will evaluate a recipe for a user based on the specific user's preferences. According to these proferences, this program can evaluate if a user will the the recipe is "good" or "bad" before even making the recipe. The intention of this functionality is to evaluate a specific recipes in which the user is interested. For example, the user may find a recipe online, but they aren't sure if they will like it. The use could simply enter the url into the program, and the program will be able to tell if the recipe is "good" or "bad" for that given user.
+This program will evaluate a recipe for a user based on the specific user's preferences. According to these proferences, this program can evaluate if a user will find the recipe to be "good" or "bad" before even making the recipe. The intention of this functionality is to evaluate a specific recipes in which the user is interested. For example, the user may find a recipe online, but they aren't sure if they will like it. The use could simply enter the url into the program, and the program will be able to tell if the recipe is "good" or "bad" for that given user.
 
-The recommendation functionality is slightly different. This functionality looks at the database or recipes within the program and finds the recipe that the user will most likely enjoy. For example, if a user can't decide what to make for dinner, the user can simply ask this program for a recommendation. The program will then output a title and associated url of the recipe that the use will enjoy.
+The recommendation functionality is slightly different. This functionality looks at the database, or recipes within the program, and finds the recipe that the user will most likely enjoy. For example, if a user can't decide what to make for dinner, the user can simply ask this program for a recommendation. The program will then output a title and associated url of the recipe that the user will enjoy.
 
 Additionally, this program provides the ability for a user to udate preferences for different recipes within the database. Updating these preferences helps make the recipe evaluation and recommenation more accurate.
 
@@ -25,15 +25,15 @@ Additionally, this program provides the ability for a user to udate preferences 
 ## Implementation
 
 ### Updating Preferences
-Updating preferences is a relatively simple process. The user simply enters a url of the associated recipe and a rating (good or bad) for the recipe. The program then updates the pandas dataframe containing the prefences data. Addtionally the code overwrites the preferences.txt file, so the preferences can be saved for the next time the program runs.
+Updating preferences is a relatively simple process. The user simply enters a url of the associated recipe and a rating (good or bad) for the recipe. The program then updates the pandas dataframe containing the prefences data. Addtionally the code overwrites the preferences.txt file, so the preferences can be saved for the next time the program runs. Initially, preferences.txt has some preferences initialized. The user can simply delete this file to reset preferences.
 
 ### Evaluating a Recipe
 Evaluating a recipe relies heavily on the functionality provides by scikitlearn text analysis features. The code essentially creates a classifier and trains the classifier according to the user's preferences. This classifier is then used to predict whether a recipe with no known preference will be good or bad. 
 
-There are two primary components to creating the classifier - 1) the tfidf matrix and 2) the classifer itself. All data was transformed to a tfidf matrix based on unigrams and with english stopwords removed. This data was then used to train the multinomial Naive Bays classifier. These two components were then merged together utilizing a pipeline for ease of use. 
+There are two primary components to creating the classifier - 1) the tfidf matrix and 2) the classifer itself. All data was transformed to a tfidf matrix based on unigrams and with english stopwords removed. This data was then used to train the multinomial Naive Bayes classifier. These two components were then merged together utilizing a pipeline for ease of use. 
 
 ### Providing Recipe Reccomendation
-Providing a recipe recommendation primarily utilizes a simmilarity function. All recipes were conveted to a tfidf matrix representation (unigram model with english stopwords removed). All recipes evalued a "good" by the user were compared to all recipes with no known preference. A consie similarity function was used to find which recipe without a preference was most similar recipes evalued as "good". The recipes with the highest avearege similarity to all "good" recipes is chosen as the recommendation.
+Providing a recipe recommendation primarily utilizes a simmilarity function. All recipes were conveted to a tfidf matrix representation (unigram model with english stopwords removed). All recipes evalued as "good" by the user were compared to all recipes with no known preference. A cosine similarity function was used to find which recipe without a preference was most similar recipes evalued as "good". The recipes with the highest avearege similarity to all "good" recipes is chosen as the recommendation.
 
 
 ## Software Documentation/ Overview of Functions:
