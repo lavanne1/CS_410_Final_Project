@@ -104,3 +104,9 @@ John LaVanne dcontributions:
   - Transformed data into .txt files
   - Write all program code
   - Wrote program documentation
+
+Yuyun Li contributions:
+  - Scraped a differnt version of web recipe data
+  - Clean data and transform it to .txt files.
+  - Help wrote peoject scripts
+  - Record the video
