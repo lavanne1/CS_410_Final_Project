@@ -97,7 +97,7 @@ The user simply enters the correspoing menu choice (1, 2, 3, or q) to navigate t
 
 ## Team contributions
 
-John LaVanne dcontributions:
+John LaVanne contributions:
   - Invented project idea
   - Wrote project proposal
   - Scraped all web recipe data
