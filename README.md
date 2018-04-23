@@ -22,23 +22,21 @@ The user simply enters the correspoing menu choice (1, 2, 3, or q) to navigate t
 The following show demonstration examples of how to use the program. Note that exact results may vary according to the predefined user preferences.
 
 ### Option 1) Update preferences
-You have chosen to update preferences...
-
-To add a preference for a recipe (good, bad), follow the instructions...
-Please enter the url of the recipe (starting with 'https://www.'): https://www.allrecipes.com/recipe/143546/lemon-souffle-cheesecake-with-blueberry-topping/
-Please enter you preference for this recipe (good, bad):bad
-Preferences have been updated :)
+    You have chosen to update preferences...
+    To add a preference for a recipe (good, bad), follow the instructions...
+    Please enter the url of the recipe (starting with 'https://www.'): https://www.allrecipes.com/recipe/143546/lemon-souffle-cheesecake-with-blueberry-topping/
+    Please enter you preference for this recipe (good, bad):bad
+    Preferences have been updated :)
 
 ### Option 2) Evaluate a recipe
-You have chosen to evaluate a recipe...
-
-Please enter the url of the recipe (starting with 'https://www.'): https://www.allrecipes.com/recipe/11731/shrimp-fra-diavolo/
-Predicted: ['good']
-Classes: ['bad' 'good']
-Probability: [[ 0.42884251  0.57115749]]
+    You have chosen to evaluate a recipe...
+    Please enter the url of the recipe (starting with 'https://www.'): https://www.allrecipes.com/recipe/11731/shrimp-fra-diavolo/
+    Predicted: ['good']
+    Classes: ['bad' 'good']
+    Probability: [[ 0.42884251  0.57115749]]
 
 ### Option 3)
-You have chosen to get a recipe reccomendation...
+    You have chosen to get a recipe reccomendation...
 
 The best recipe for you is...
 Title: Sugar Coated Pecans
