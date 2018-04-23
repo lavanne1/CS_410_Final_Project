@@ -37,10 +37,9 @@ The following show demonstration examples of how to use the program. Note that e
 
 ### Option 3)
     You have chosen to get a recipe reccomendation...
-
-The best recipe for you is...
-Title: Sugar Coated Pecans
-URL: https://www.allrecipes.com/recipe/13838/sugar-coated-pecans/
+    The best recipe for you is...
+    Title: Sugar Coated Pecans
+    URL: https://www.allrecipes.com/recipe/13838/sugar-coated-pecans/
 
 
 
