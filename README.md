@@ -9,6 +9,42 @@ Also, this requires the installation of the following packages before running:
   - numpy  
   - os
 
+## Example Usage
+The main menu presents the user with the following opitons:
+
+    1) Update preferences
+    2) Evaluate a recipe
+    3) Get a recipe reccomendation
+    q) Quit
+    
+The user simply enters the correspoing menu choice (1, 2, 3, or q) to navigate to the proper functions in this application.
+
+The following show demonstration examples of how to use the program. Note that exact results may vary according to the predefined user preferences.
+
+### Option 1) Update preferences
+You have chosen to update preferences...
+
+To add a preference for a recipe (good, bad), follow the instructions...
+Please enter the url of the recipe (starting with 'https://www.'): https://www.allrecipes.com/recipe/143546/lemon-souffle-cheesecake-with-blueberry-topping/
+Please enter you preference for this recipe (good, bad):bad
+Preferences have been updated :)
+
+### Option 2) Evaluate a recipe
+You have chosen to evaluate a recipe...
+
+Please enter the url of the recipe (starting with 'https://www.'): https://www.allrecipes.com/recipe/11731/shrimp-fra-diavolo/
+Predicted: ['good']
+Classes: ['bad' 'good']
+Probability: [[ 0.42884251  0.57115749]]
+
+### Option 3)
+You have chosen to get a recipe reccomendation...
+
+The best recipe for you is...
+Title: Sugar Coated Pecans
+URL: https://www.allrecipes.com/recipe/13838/sugar-coated-pecans/
+
+
 
 ## Purpose/ Function
 This program is intended to help usese make better decisions about making recipes. It essentially provides two main uses.
