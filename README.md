@@ -35,7 +35,7 @@ The following show demonstration examples of how to use the program. Note that e
     Classes: ['bad' 'good']
     Probability: [[ 0.42884251  0.57115749]]
 
-### Option 3)
+### Option 3) Get recipe recommendation
     You have chosen to get a recipe reccomendation...
     The best recipe for you is...
     Title: Sugar Coated Pecans
