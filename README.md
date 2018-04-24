@@ -130,7 +130,7 @@ The user simply enters the correspoing menu choice (1, 2, 3, or q) to navigate t
 
 ## Team contributions
 
-John LaVanne contributions:
+John LaVanne:
   - Invented project idea
   - Wrote project proposal
   - Scraped all web recipe data
@@ -138,8 +138,18 @@ John LaVanne contributions:
   - Write all program code
   - Wrote program documentation
 
-Yuyun Li contributions:
+Yuyun Li:
   - Scraped a differnt version of web recipe data
   - Clean data and transform it to .txt files.
   - Help wrote peoject scripts
   - Record the video
+  
+Wang Rui-meng:
+  - Idea generation
+  - Algorithm development
+  - Video development
+  
+Matther Ross:
+  - Idea generation
+  - Algorithm development
+  - Video development
