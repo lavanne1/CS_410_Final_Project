@@ -115,7 +115,7 @@ cleanr_url_list.txt provides a list of all url's included in the database. These
 
 After downloading the program, this application should should be run as a command prompt interfact. Simply run this program from your command promt window using the following command:
   
-   python final_project_main.py
+       python final_project_main.py
    
 The program should run and the user can simply follow the on-screen prompts. The user can navigate the program through the menu options displayed. Note that the user should enter "q" on the main menu to quite the program.
 
